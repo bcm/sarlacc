@@ -1,0 +1,21 @@
+# Logfile created on Sat Nov 13 14:15:17 -0500 2010 by logger.rb/22285
+2010-11-13 14:15:17.923997 sarlacc(12103) [INFO] [daemon-kit]: DaemonKit (0.1.8.1) booting in test mode
+2010-11-13 14:15:17.924133 sarlacc(12103) [INFO] [daemon-kit]: Setting up trap for USR1
+2010-11-13 14:15:17.924250 sarlacc(12103) [INFO] [daemon-kit]: Setting up trap for USR2
+2010-11-13 14:15:17.924357 sarlacc(12103) [INFO] [daemon-kit]: Setting up trap for HUP
+2010-11-13 14:15:17.924468 sarlacc(12103) [INFO] [daemon-kit]: Setting up trap for INT
+2010-11-13 14:15:17.924565 sarlacc(12103) [INFO] [daemon-kit]: Setting up trap for TERM
+2010-11-13 14:15:17.933415 sarlacc(12103) [INFO] [daemon-kit]: DaemonKit (0.1.8.1) booted, now running sarlacc
+2010-11-13 14:15:17.961917 sarlacc(12103) [INFO] [daemon-kit]: DaemonKit (0.1.8.1) booted, now running sarlacc
+2010-11-13 14:15:17.984917 sarlacc(12103) [INFO] [daemon-kit]: Running shutdown hooks
+2010-11-13 14:15:17.985045 sarlacc(12103) [WARN] [daemon-kit]: Shutting down sarlacc
+2010-11-13 14:16:18.588035 sarlacc(12115) [INFO] [daemon-kit]: DaemonKit (0.1.8.1) booting in test mode
+2010-11-13 14:16:18.588192 sarlacc(12115) [INFO] [daemon-kit]: Setting up trap for USR1
+2010-11-13 14:16:18.588306 sarlacc(12115) [INFO] [daemon-kit]: Setting up trap for USR2
+2010-11-13 14:16:18.588410 sarlacc(12115) [INFO] [daemon-kit]: Setting up trap for HUP
+2010-11-13 14:16:18.588518 sarlacc(12115) [INFO] [daemon-kit]: Setting up trap for INT
+2010-11-13 14:16:18.588615 sarlacc(12115) [INFO] [daemon-kit]: Setting up trap for TERM
+2010-11-13 14:16:18.589259 sarlacc(12115) [INFO] [daemon-kit]: DaemonKit (0.1.8.1) booted, now running sarlacc
+2010-11-13 14:16:18.595187 sarlacc(12115) [INFO] [daemon-kit]: DaemonKit (0.1.8.1) booted, now running sarlacc
+2010-11-13 14:16:18.597623 sarlacc(12115) [INFO] [daemon-kit]: Running shutdown hooks
+2010-11-13 14:16:18.597797 sarlacc(12115) [WARN] [daemon-kit]: Shutting down sarlacc

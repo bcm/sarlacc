@@ -4,25 +4,21 @@ require 'feedzirra'
 class Sarlacc
   attr_reader :url
 
-  def initialize(url)
+  def initialize(url, options = {})
     @url = url
-    @callback = nil
-    listen
+    @onfeed = options[:onfeed]
+    @onentry = options[:onentry]
   end
 
-  def onfeed(&block)
-    @callback = block
-  end
-
-private
-  def listen
+  def consume
     request = EventMachine::HttpRequest.new(@url).get
 
     request.callback do
       if request.response_header.status == 200
         begin
           feed = Feedzirra::Feed.parse(request.response)
-          @callback.call(feed)
+          @onfeed.call(feed) if @onfeed
+          feed.entries.each {|entry| @onentry.call(entry)} if @onentry
         rescue Exception => e
           puts "Error parsing feed at #{@url}: #{@e.message}"
         end

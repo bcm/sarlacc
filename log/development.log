@@ -1,0 +1,57 @@
+# Logfile created on Sat Nov 13 13:52:27 -0500 2010 by logger.rb/22285
+2010-11-13 13:52:27.607018 sarlacc(90866) [INFO] [daemon-kit]: DaemonKit (0.1.8.1) booting in development mode
+2010-11-13 13:52:27.607177 sarlacc(90866) [INFO] [daemon-kit]: Setting up trap for USR1
+2010-11-13 13:52:27.607304 sarlacc(90866) [INFO] [daemon-kit]: Setting up trap for USR2
+2010-11-13 13:52:27.607422 sarlacc(90866) [INFO] [daemon-kit]: Setting up trap for HUP
+2010-11-13 13:52:27.607539 sarlacc(90866) [INFO] [daemon-kit]: Setting up trap for INT
+2010-11-13 13:52:27.607646 sarlacc(90866) [INFO] [daemon-kit]: Setting up trap for TERM
+2010-11-13 13:52:27.608549 sarlacc(90866) [INFO] [daemon-kit]: Running shutdown hooks
+2010-11-13 13:52:27.608651 sarlacc(90866) [WARN] [daemon-kit]: Shutting down sarlacc
+2010-11-13 13:53:09.324655 sarlacc(90897) [INFO] [daemon-kit]: DaemonKit (0.1.8.1) booting in development mode
+2010-11-13 13:53:09.324827 sarlacc(90897) [INFO] [daemon-kit]: Setting up trap for USR1
+2010-11-13 13:53:09.324946 sarlacc(90897) [INFO] [daemon-kit]: Setting up trap for USR2
+2010-11-13 13:53:09.325226 sarlacc(90897) [INFO] [daemon-kit]: Setting up trap for HUP
+2010-11-13 13:53:09.325344 sarlacc(90897) [INFO] [daemon-kit]: Setting up trap for INT
+2010-11-13 13:53:09.325496 sarlacc(90897) [INFO] [daemon-kit]: Setting up trap for TERM
+2010-11-13 13:53:09.326216 sarlacc(90897) [INFO] [daemon-kit]: DaemonKit (0.1.8.1) booted, now running sarlacc
+2010-11-13 13:53:09.354235 sarlacc(90897) [INFO] [daemon-kit]: Starting rufus-scheduler
+2010-11-13 13:54:09.448938 sarlacc(90897) [DEBUG] sarlacc-daemon.rb:44: Scheduled task completed at Sat Nov 13 13:54:09 -0500 2010
+2010-11-13 13:54:57.432189 sarlacc(90897) [INFO] [daemon-kit]: Running signal traps for INT
+2010-11-13 13:54:57.432525 sarlacc(90897) [INFO] [daemon-kit]: Running shutdown hooks
+2010-11-13 13:54:57.432785 sarlacc(90897) [WARN] [daemon-kit]: Shutting down sarlacc
+2010-11-13 13:55:14.108389 sarlacc(90911) [INFO] [daemon-kit]: DaemonKit (0.1.8.1) booting in development mode
+2010-11-13 13:55:14.108561 sarlacc(90911) [INFO] [daemon-kit]: Setting up trap for USR1
+2010-11-13 13:55:14.108679 sarlacc(90911) [INFO] [daemon-kit]: Setting up trap for USR2
+2010-11-13 13:55:14.108783 sarlacc(90911) [INFO] [daemon-kit]: Setting up trap for HUP
+2010-11-13 13:55:14.108889 sarlacc(90911) [INFO] [daemon-kit]: Setting up trap for INT
+2010-11-13 13:55:14.108987 sarlacc(90911) [INFO] [daemon-kit]: Setting up trap for TERM
+2010-11-13 13:55:14.109660 sarlacc(90911) [INFO] [daemon-kit]: DaemonKit (0.1.8.1) booted, now running sarlacc
+2010-11-13 13:55:14.137929 sarlacc(90911) [INFO] [daemon-kit]: Starting rufus-scheduler
+2010-11-13 13:55:22.340357 sarlacc(90911) [INFO] [daemon-kit]: Running signal traps for INT
+2010-11-13 13:55:22.342377 sarlacc(90911) [INFO] [daemon-kit]: Running shutdown hooks
+2010-11-13 13:55:22.342641 sarlacc(90911) [WARN] [daemon-kit]: Shutting down sarlacc
+2010-11-13 14:21:46.785705 sarlacc(12214) [INFO] [daemon-kit]: DaemonKit (0.1.8.1) booting in development mode
+2010-11-13 14:21:46.842231 sarlacc(12214) [INFO] [daemon-kit]: Setting up trap for USR1
+2010-11-13 14:21:46.842532 sarlacc(12214) [INFO] [daemon-kit]: Setting up trap for USR2
+2010-11-13 14:21:46.842715 sarlacc(12214) [INFO] [daemon-kit]: Setting up trap for HUP
+2010-11-13 14:21:46.842904 sarlacc(12214) [INFO] [daemon-kit]: Setting up trap for INT
+2010-11-13 14:21:46.843013 sarlacc(12214) [INFO] [daemon-kit]: Setting up trap for TERM
+2010-11-13 14:21:46.843942 sarlacc(12214) [INFO] [daemon-kit]: DaemonKit (0.1.8.1) booted, now running sarlacc
+2010-11-13 14:21:47.136066 sarlacc(12214) [INFO] [daemon-kit]: Starting rufus-scheduler
+2010-11-13 14:21:47.294452 sarlacc(12214) [DEBUG] sarlacc-daemon.rb:22: UCB Training Center NYC Classes now Registering
+2010-11-13 14:21:51.696920 sarlacc(12214) [INFO] [daemon-kit]: Running signal traps for INT
+2010-11-13 14:21:51.710782 sarlacc(12214) [INFO] [daemon-kit]: Running shutdown hooks
+2010-11-13 14:21:51.710983 sarlacc(12214) [WARN] [daemon-kit]: Shutting down sarlacc
+2010-11-13 14:22:55.344607 sarlacc(12224) [INFO] [daemon-kit]: DaemonKit (0.1.8.1) booting in development mode
+2010-11-13 14:22:55.366810 sarlacc(12224) [INFO] [daemon-kit]: Setting up trap for USR1
+2010-11-13 14:22:55.366960 sarlacc(12224) [INFO] [daemon-kit]: Setting up trap for USR2
+2010-11-13 14:22:55.367077 sarlacc(12224) [INFO] [daemon-kit]: Setting up trap for HUP
+2010-11-13 14:22:55.367188 sarlacc(12224) [INFO] [daemon-kit]: Setting up trap for INT
+2010-11-13 14:22:55.367299 sarlacc(12224) [INFO] [daemon-kit]: Setting up trap for TERM
+2010-11-13 14:22:55.415202 sarlacc(12224) [INFO] [daemon-kit]: DaemonKit (0.1.8.1) booted, now running sarlacc
+2010-11-13 14:22:55.433858 sarlacc(12224) [INFO] [daemon-kit]: Starting rufus-scheduler
+2010-11-13 14:23:25.910047 sarlacc(12224) [DEBUG] sarlacc-daemon.rb:22: UCB Training Center NYC Classes now Registering
+2010-11-13 14:23:55.923262 sarlacc(12224) [DEBUG] sarlacc-daemon.rb:22: UCB Training Center NYC Classes now Registering
+2010-11-13 14:23:57.850799 sarlacc(12224) [INFO] [daemon-kit]: Running signal traps for INT
+2010-11-13 14:23:57.908059 sarlacc(12224) [INFO] [daemon-kit]: Running shutdown hooks
+2010-11-13 14:23:57.908239 sarlacc(12224) [WARN] [daemon-kit]: Shutting down sarlacc

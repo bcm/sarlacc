@@ -1,16 +1,5 @@
 #!/usr/bin/env ruby
 
-require 'rubygems'
-require 'bundler/setup'
+require File.expand_path('../../config/environment',  __FILE__)
 
-require 'eventmachine'
-require 'lib/sarlacc'
-
-EventMachine.run {
-#  EventMachine.add_periodic_timer(1) {
-  lister = Sarlacc.new('http://newyork.ucbtheatre.com/classes/rss')
-  lister.onfeed do |feed|
-    puts "Feed: #{feed.title}"
-  end
-#  }
-}
+DaemonKit::Application.exec( DAEMON_ROOT + '/libexec/sarlacc-daemon.rb' )
