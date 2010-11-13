@@ -1,34 +1,38 @@
-require 'em-http'
 require 'feedzirra'
 
 class Sarlacc
   attr_reader :url
 
-  def initialize(url, options = {})
+  USER_AGENT = "Sarlacc/0.1"
+
+  def initialize(url, &block)
     @url = url
-    @onfeed = options[:onfeed]
-    @onentry = options[:onentry]
+    @feed = nil
+    @callback = block if block_given?
   end
 
   def consume
-    request = EventMachine::HttpRequest.new(@url).get
-
-    request.callback do
-      if request.response_header.status == 200
-        begin
-          feed = Feedzirra::Feed.parse(request.response)
-          @onfeed.call(feed) if @onfeed
-          feed.entries.each {|entry| @onentry.call(entry)} if @onentry
-        rescue Exception => e
-          puts "Error parsing feed at #{@url}: #{@e.message}"
-        end
-      else
-        puts "Request for feed at #{@url} failed with status #{request.response_header.status}"
+    if @feed
+      on_success = lambda do |feed|
+        DaemonKit.logger.debug("Feed at #{feed.url} has #{feed.new_entries.count} new entries")
+        feed.new_entries.each {|entry| @callback.call(feed, entry)} if @callback
+        @feed = feed
       end
-    end
-
-    request.errback do |request|
-      puts "Error fetching feed at #{@url}: #{request.error}"
+      on_failure = lambda do |feed, code, header, body|
+        DaemonKit.logger.warn("Request for feed at #{feed.url} failed with status #{code}")
+      end
+      Feedzirra::Feed.update(@feed, :on_success => on_success, :on_failure => on_failure)
+    else
+      on_success = lambda do |url, feed|
+        DaemonKit.logger.debug("Feed at #{url} has #{feed.entries.count} entries")
+        feed.entries.each {|entry| @callback.call(feed, entry)} if @callback
+        @feed = feed
+      end
+      on_failure = lambda do |url, code, header, body|
+        DaemonKit.logger.warn("Request for feed at #{url} failed with status #{code}")
+      end
+      Feedzirra::Feed.fetch_and_parse(@url, :on_success => on_success, :on_failure => on_failure,
+        :user_agent => USER_AGENT)
     end
   end
 end

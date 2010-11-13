@@ -17,12 +17,17 @@ end
 
 # To make use of the EventMachine-powered scheduler, uncomment the
 # line below *before* adding any schedules.
-DaemonKit::EM.run
+#DaemonKit::EM.run
 
-onfeed = lambda {|feed| DaemonKit.logger.debug feed.title}
-sarlacc = Sarlacc.new('http://newyork.ucbtheatre.com/classes/rss', :onfeed => onfeed)
+sarlacc = Sarlacc.new('http://newyork.ucbtheatre.com/classes/rss') do |feed, entry|
+  DaemonKit.logger.info(entry.title)
+end
+
+# fill up the feed
+sarlacc.consume
 
 DaemonKit::Cron.scheduler.every("30s") do
+  # update the feed
   sarlacc.consume
 end
 
