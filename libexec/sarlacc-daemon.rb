@@ -26,7 +26,7 @@ end
 # fill up the feed
 sarlacc.consume
 
-DaemonKit::Cron.scheduler.every("30s") do
+DaemonKit::Cron.scheduler.every("15m") do
   # update the feed
   sarlacc.consume
 end
