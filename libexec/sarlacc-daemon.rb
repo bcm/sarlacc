@@ -19,6 +19,7 @@ end
 # line below *before* adding any schedules.
 #DaemonKit::EM.run
 
+Sarlacc.logger = DaemonKit.logger
 sarlacc = Sarlacc.new('http://newyork.ucbtheatre.com/classes/rss') do |feed, entry|
   DaemonKit.logger.info(entry.title)
 end
