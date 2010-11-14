@@ -26,6 +26,7 @@ Gem::Specification.new do |s|
      "Rakefile",
      "VERSION",
      "lib/sarlacc.rb",
+     "sarlacc.gemspec",
      "spec/sarlacc_spec.rb",
      "spec/spec_helper.rb",
      "tasks/rspec.rake"

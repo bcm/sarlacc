@@ -3,15 +3,18 @@ require 'feedzirra'
 
 class Sarlacc
   cattr_accessor :logger, :instance_writer => false
+  cattr_accessor :user_agent, :instance_writer => false
 
   attr_reader :url, :feed
 
-  USER_AGENT = "Sarlacc/0.1"
-
-  def initialize(url, &block)
+  def initialize(url)
     @url = url
     @feed = nil
-    @callback = block if block_given?
+    @callback = nil
+  end
+
+  def on_entry(&block)
+    @callback = block
   end
 
   def consume
@@ -35,7 +38,7 @@ class Sarlacc
         logger.warn("Request for feed at #{url} failed with status #{code}") if logger
       end
       Feedzirra::Feed.fetch_and_parse(@url, :on_success => on_success, :on_failure => on_failure,
-        :user_agent => USER_AGENT)
+        :user_agent => user_agent)
     end
   end
 end
