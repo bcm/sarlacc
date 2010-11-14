@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{sarlacc}
-  s.version = "0.1.4"
+  s.version = "0.1.5"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Brian Moseley"]
-  s.date = %q{2010-11-13}
+  s.date = %q{2010-11-14}
   s.description = %q{A library that monitors data feeds for new entries}
   s.email = %q{bcm@maz.org}
   s.extra_rdoc_files = [
