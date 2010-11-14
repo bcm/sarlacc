@@ -6,8 +6,6 @@ module Sarlacc
       raise ArgumentError unless source.is_a?(Sarlacc::Source)
       @source = source
       @feed = nil
-      @on_fetch = []
-      @on_update = []
       @user_agent = options[:user_agent]
     end
 
