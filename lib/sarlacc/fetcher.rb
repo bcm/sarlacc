@@ -13,6 +13,10 @@ module Sarlacc
     def fetch
       if @feed
         on_success = lambda do |feed|
+          Sarlacc.logger.debug("Feed at #{feed.url} has #{feed.new_entries.count} new entries") if Sarlacc.logger
+          feed.new_entries.each do |entry|
+            Sarlacc.logger.info("'#{entry.title}' published at #{entry.published}") if Sarlacc.logger
+          end
           @queue << @source.emit_update_event(feed)
         end
         on_failure = lambda do |feed, code, header, body|
@@ -21,6 +25,10 @@ module Sarlacc
         Feedzirra::Feed.update(@feed, :on_success => on_success, :on_failure => on_failure)
       else
         on_success = lambda do |url, feed|
+          Sarlacc.logger.debug("Feed at #{url} has #{feed.entries.count} entries") if Sarlacc.logger
+          feed.entries.each do |entry|
+             Sarlacc.logger.info("'#{entry.title}' published at #{entry.published}") if Sarlacc.logger
+           end
           @queue << @source.emit_fetch_event(feed)
           @feed = feed
         end
